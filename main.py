@@ -127,11 +127,12 @@ balls = [
     for _ in range(random_number)
 ]
 
-# Set up video recording
-fourcc = cv2.VideoWriter_fourcc(*"XVID")
+# Set up video recording with MP4 format
+fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # MP4 codec
 video_writer = cv2.VideoWriter(
-    "bouncing_balls_with_sound.avi", fourcc, VIDEO_FPS, (WIDTH, HEIGHT)
+    "bouncing_balls_with_sound.mp4", fourcc, VIDEO_FPS, (WIDTH, HEIGHT)
 )
+
 
 # Main loop
 frame_count = VIDEO_LENGTH * VIDEO_FPS
